@@ -12,36 +12,36 @@ public class Fish implements Serializable {
     private String species;
     private String weightInOz;
     private String dateCaught;
-    private String locationCaughtLatitude;
-    private String locationCaughtLongitude;
+    private String lon;
+    private String lat;
 
     public Fish() {
     }
 
-    public Fish(String key, String species, String weightInOz, String dateCaught, String locationCaughtLatitude, String locationCaughtLongitude) {
+   // public Fish(String key, String species, String weightInOz, String dateCaught, String lon, String lat) {
+    //    this.key = key;
+    //    this.species = species;
+    //    this.weightInOz = weightInOz;
+    //    this.dateCaught = dateCaught;
+    //    this.lon = lon;
+    //    this.lat = lat;
+  //  }
+
+   // public Fish(String species, String weightInOz, String dateCaught, String lat, String lon) {
+     //   this.species = species;
+    //    this.weightInOz = weightInOz;
+    //    this.dateCaught = dateCaught;
+   //     this.lat = lat;
+   //     this.lon = lon;
+   // }
+
+    public Fish(String key, String species, String weightInOz, String dateCaught, String lat, String lon) {
         this.key = key;
         this.species = species;
         this.weightInOz = weightInOz;
         this.dateCaught = dateCaught;
-        this.locationCaughtLatitude = locationCaughtLatitude;
-        this.locationCaughtLongitude = locationCaughtLongitude;
-    }
-
-    public Fish(String species, String weightInOz, String dateCaught, String locationCaughtLatitude, String locationCaughtLongitude) {
-        this.species = species;
-        this.weightInOz = weightInOz;
-        this.dateCaught = dateCaught;
-        this.locationCaughtLatitude = locationCaughtLatitude;
-        this.locationCaughtLongitude = locationCaughtLongitude;
-    }
-
-    public Fish(String key, String species, String weightInOz, String dateCaught) {
-        this.key = key;
-        this.species = species;
-        this.weightInOz = weightInOz;
-        this.dateCaught = dateCaught;
-        this.locationCaughtLatitude = locationCaughtLatitude;
-        this.locationCaughtLongitude = locationCaughtLongitude;
+        this.lat = lat;
+        this.lon = lon;
     }
 
     public String getKey() {
@@ -76,20 +76,20 @@ public class Fish implements Serializable {
         this.dateCaught = dateCaught;
     }
 
-    public String getLocationCaughtLatitude() {
-        return locationCaughtLatitude;
+    public String getLat() {
+        return lat;
     }
 
-    public void setLocationCaughtLatitude(String locationCaughtLatitude) {
-        this.locationCaughtLatitude = locationCaughtLatitude;
+    public void setLat(String lat) {
+        this.lat = lat;
     }
 
-    public String getLocationCaughtLongitude() {
-        return locationCaughtLongitude;
+    public String getLon() {
+        return lon;
     }
 
-    public void setLocationCaughtLongitude(String locationCaughtLongitude) {
-        this.locationCaughtLongitude = locationCaughtLongitude;
+    public void setLon(String lon) {
+        this.lon = lon;
     }
 
     @Override
@@ -98,6 +98,8 @@ public class Fish implements Serializable {
                 "species='" + species + '\'' +
                 ", weightInOz='" + weightInOz + '\'' +
                 ", dateCaught='" + dateCaught + '\'' +
+                ", Latitude='" + lat + '\''+
+                ", Longitude='" + lon + '\''+
                 '}';
     }
 }

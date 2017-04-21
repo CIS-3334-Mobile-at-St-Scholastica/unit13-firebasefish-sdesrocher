@@ -58,17 +58,31 @@
         android:id="@+id/editTextDate" />
 
     <TextView
-        android:text="Location"
+        android:text="Latitude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView6" />
+        android:id="@+id/textViewLat" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editTextLocation" />
+        android:id="@+id/editTextLat" />
+
+    <TextView
+        android:text="Longitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewLong" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextLong" />
 
     <Button
         android:text="Back"

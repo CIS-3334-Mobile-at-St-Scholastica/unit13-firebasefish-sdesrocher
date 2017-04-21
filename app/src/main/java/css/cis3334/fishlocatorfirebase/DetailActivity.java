@@ -10,7 +10,7 @@ import android.widget.EditText;
 public class DetailActivity extends AppCompatActivity {
 
     Button buttonBack;
-    EditText editTextSpecies, editTextWeight, editTextDate, editTextLocation;
+    EditText editTextSpecies, editTextWeight, editTextDate, editTextLong, editTextLat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,15 +21,20 @@ public class DetailActivity extends AppCompatActivity {
         Fish fish = (Fish)   bundle.getSerializable("Fish");
 
         // link each editText variable to the xml layout
+        editTextLat = (EditText) findViewById(R.id.editTextLat);
+        editTextLong = (EditText) findViewById(R.id.editTextLong);
         editTextSpecies = (EditText) findViewById(R.id.editTextSpecies);
         editTextWeight = (EditText) findViewById(R.id.editTextWeight);
         editTextDate = (EditText) findViewById(R.id.editTextDate);
-        editTextLocation = (EditText) findViewById(R.id.editTextLocation);
+
 
         editTextSpecies.setText(fish.getSpecies());
         editTextWeight.setText(fish.getWeightInOz());
         editTextDate.setText(fish.getDateCaught());
-        editTextLocation.setText(fish.getLocationCaughtLatitude() + " x " + fish.getLocationCaughtLongitude());
+        editTextLat.setText(fish.getLat());
+        editTextLong.setText (fish.getLon());
+
+        //editTextLocation.setText(fish.getLocationCaughtLatitude() + " x " + fish.getLocationCaughtLongitude());
 
         // set up the button listener
         buttonBack = (Button) findViewById(R.id.buttonReturn);
